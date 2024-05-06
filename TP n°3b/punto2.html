@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <script>
+        
+       
+var respuesta=""
+var tipo =""
+var totalS=0
+var totalD=0
+var totalT=0
+var monto=0
+        do {
+           
+            tipo = prompt("que tipo de haburguesa quiere: simple(S)-doble(D)-triple(T)")
+
+            if (tipo == "S") {
+                monto = monto + 20
+                
+            }if (tipo=="D"){
+                monto = monto +25
+            }if (tipo=="T"){
+                monto = monto +28
+            }
+
+            respuesta=confirm("quiere otra hamburguesa?")
+            //alert(respuesta)
+        } while (respuesta);
+
+       
+        var metodoPago=prompt("con que metodo va a pagar: efectivo(E)-tarjeta(T)")
+        document.write("<br>")
+        precioTotal=monto
+
+        if(metodoPago=="T"){
+            precioTarjeta=monto*1.05
+            document.write("el precio total es de: "+precioTarjeta+"$")
+            document.write("<br>")
+            
+        }else if(metodoPago="E"){
+            precioEfectivo=monto
+            document.write("el precio total es de: "+precioEfectivo+"$")
+            document.write("<br>")
+        }
+
+       
+
+
+    </script>
+</body>
+
+</html>

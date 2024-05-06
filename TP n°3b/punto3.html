@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+
+        var precio= new Array()
+        var descuento= new Array()
+        var respuesta=""
+        var total=0
+        cont=0
+
+
+        do {
+
+            precio[cont]=parseFloat(prompt("cual es el precio del articulo?"))
+
+            
+
+            if (precio [cont]>= 200) {
+                descuento[cont]= precio[cont]*0.15
+                
+                
+            }
+            if (precio[cont] > 100 && precio[cont]<200){
+                descuento[cont]= precio[cont]*0.12
+               
+            }
+            if (precio[cont] <= 100){
+                descuento[cont]= precio[cont]*0.10
+               
+            }
+            cont++
+
+            respuesta=confirm("va a llevar otro articulo?")
+
+        } while (respuesta);
+    
+        for(var i=0;i<precio.length; i++){
+            document.write("el precio del articulo es: "+precio[i]+"$")
+            document.write("<br>")
+            document.write("el precio del articulo con descuento es: "+descuento[i]+"$")
+            document.write("<br>")
+            total=precio[i]+total
+
+            document.write("el precio total es: "+total+"$")
+            
+
+        }
+
+        total
+
+  
+
+
+
+
+    </script>
+</body>
+</html>

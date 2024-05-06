@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <script>
+        var num1 = parseFloat(prompt("ingreese un numero:"))
+        var num2 = parseFloat(prompt("ingreese otro numero:"))
+        if(num2<num1){
+            var cambio=num1
+            num1=num2
+            num2=cambio
+        }
+        multiplicacion = 1
+        for (f = n1; f <= n2; f++) {
+            document.write("------------"+"<br>")
+            document.write("TABLA DEL "+ f +"<br>")
+
+            for (a = 0; a <= 10; a++){
+                multiplicacion = f * a
+            document.write(f + "X" + a + "=" + multiplicacion)
+            document.write("<br>")
+        }
+        }
+    </script>
+</body>
+
+</html>
